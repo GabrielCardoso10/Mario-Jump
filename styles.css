@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+.start{
+  
+   text-align: center;
+   position: relative;
+   font-weight: bold;
+   transform: translate(-50,-50);
+   left: 35%;
+   top: 95%;
+   border: none;
+   font-family: 'Courier New', monospace; 
+   font-size: 35px; 
+   color: rgb(15, 100, 15); 
+   border-radius: 40px; 
+   display: inline-block;
+}
+
+
+ .score{
+
+   font-weight: bold;
+   position: fixed;
+   transform: translate(-50,-50);
+   text-align: center;
+   left: 37%;
+   top: 40%;
+   font-family: 'Courier New', monospace; 
+   font-size: 50px; 
+   color: rgb(15, 100, 15) ; 
+   padding: 10px; 
+   border-radius: 25px; 
+   display: inline-block; 
+}
+
+
+ 
+ 
+
+
+ .game{
+   
+   width: 100%;
+    height: 100vh;
+    border-bottom: 30px solid rgb(15, 100, 15);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+ }
+
+
+ button{
+   
+   text-align: center;
+   position: absolute;
+   font-weight: bold;
+   transform: translate(-50,-50);
+   left: 35%;
+   top: 90%;
+   font-family: 'Courier New', monospace; 
+   font-size: 35px; 
+   color: rgb(15, 100, 15); 
+   border-radius: 40px; 
+   display: none;
+    
+   }
+ 
+ 
+ button:hover{
+    border: 2px solid green;
+    background: none;
+    color: green;
+   } 
+
+
+ .game-over{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+   }
+
+
+ .game-over h1{
+   font-weight: bold;
+   position: fixed;
+   transform: translate(-50,-50);
+   text-align: center;
+   left: 33%;
+   top: 50%;
+   font-family: 'Courier New', monospace; 
+   font-size: 70px; 
+   color: rgb(255, 0, 0) ; 
+   padding: 10px; 
+   border-radius: 25px; 
+   display: inline-block; 
+}
+   
+
+
+ .pipe{
+    
+   position: absolute;
+    bottom: 0;
+    right: -80px;
+    width: 80px;
+   }
+ 
+ 
+ .mario{
+
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+   }
+ 
+ 
+ .clouds{
+    width: 550px;
+    position: absolute;
+    top: 0;
+    animation: clouds-animation 10s infinite linear;
+   }
+ 
+ 
+ @keyframes clouds-animation{
+    from{
+       right: -550px;
+       }
+    to{
+       right: 100%;
+       }
+
+
+      }
+ 
+ 
+ .pipe-animation{
+
+    animation: pipe-animation 1s infinite linear;
+ 
+   }
+ 
+ 
+ @keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%
+    }
+ }
+ 
+ 
+ .jump{
+    animation: jump 800ms ease-out;
+ }
+ 
+ 
+ @keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 200px;
+    }
+    50%{
+        bottom: 200px;
+    }
+    60%{
+        bottom: 200px;
+    }
+    100%{
+        bottom: 0;
+    }
+ }
+ 
